@@ -9,7 +9,6 @@
       "Courier New", monospace;
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-black: #000;
     --color-white: #fff;
@@ -192,11 +191,14 @@
   .top-125 {
     top: calc(var(--spacing) * 125);
   }
-  .top-\[1\%\] {
-    top: 1%;
+  .top-\[0\%\] {
+    top: 0%;
   }
   .top-\[2\%\] {
     top: 2%;
+  }
+  .top-\[3\%\] {
+    top: 3%;
   }
   .top-\[20\%\] {
     top: 20%;
@@ -210,11 +212,14 @@
   .left-120 {
     left: calc(var(--spacing) * 120);
   }
-  .left-\[15\%\] {
-    left: 15%;
+  .left-\[7\%\] {
+    left: 7%;
   }
   .left-\[21\%\] {
     left: 21%;
+  }
+  .left-\[72\%\] {
+    left: 72%;
   }
   .z-10 {
     z-index: 10;
@@ -234,9 +239,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -249,8 +251,8 @@
   .h-screen {
     height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
+  .min-h-screen {
+    min-height: 100vh;
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -261,11 +263,20 @@
   .w-\[20\%\] {
     width: 20%;
   }
+  .w-\[22\%\] {
+    width: 22%;
+  }
   .w-\[25\%\] {
     width: 25%;
   }
   .w-\[28vw\] {
     width: 28vw;
+  }
+  .w-\[32\%\] {
+    width: 32%;
+  }
+  .w-\[35\%\] {
+    width: 35%;
   }
   .w-\[50\%\] {
     width: 50%;
@@ -276,23 +287,11 @@
   .w-\[60\%\] {
     width: 60%;
   }
-  .w-\[70\%\] {
-    width: 70%;
-  }
   .w-\[90\%\] {
     width: 90%;
   }
-  .w-\[95\%\] {
-    width: 95%;
-  }
-  .w-\[100\%\] {
-    width: 100%;
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .rotate-240 {
     rotate: 240deg;
@@ -303,9 +302,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -334,15 +330,14 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-none {
     --tw-border-style: none;
@@ -353,9 +348,6 @@
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
-  }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
   }
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
@@ -408,13 +400,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
 }
 @font-face {
   font-family: 'ProductSans';
@@ -426,7 +411,6 @@
 }
 @layer components {
   .card {
-    position: relative;
     display: flex;
     height: 70vh;
     width: 28vw;
@@ -462,6 +446,11 @@
     color: var(--color-white);
   }
 }
+@layer utilities {
+  .custom-transition {
+    transition: transition-all duration-300 ease-in-out;
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -481,11 +470,6 @@
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -529,11 +513,6 @@
   inherits: false;
   initial-value: 100%;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -542,7 +521,6 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -552,7 +530,6 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
-      --tw-outline-style: solid;
     }
   }
 }

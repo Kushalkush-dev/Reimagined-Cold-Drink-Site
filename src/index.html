@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,8 @@
 />
   <link rel="stylesheet" href="output.css">
 </head>
-<body>
-  <div id="main">
+<body class="overflow-x-hidden">
+  <div id="main" class="overflow-x-hidden">
     <nav class="flex items-center justify-between w-full h-15 px-10 py-3 font-PtSans text-xl fixed text-white z-50">
       <a href="#">logo</a>
       <div id="center-nav" class="flex gap-5">
@@ -24,10 +24,10 @@
     </nav>
     <div id="one" class="w-full h-screen flex items-center justify-center bg-gradient-to-br	from-yellow-500 to-orange-500">
       <h1 id="Fantatitle" class="text-[30vw] font-PtSansB text-white">FANTA</h1>
-      <img src="/Assests/fantatransperent.png" alt="fanta" id="fanta" class="w-[25%] z-20 absolute ">
-      <img src="/Assests/orangetransperant.png" alt="orange" id="orange" class="w-[20%] absolute top-20 left-87 z-10">
-      <img src="/Assests/orange.webp" alt="orange2" id="orange2" class="w-[20%] absolute top-125 right-85 z-30">
-      <img src="/Assests/leaftransparent.png" alt="leaf" id="leaf" class="w-[15%] absolute top-14 rotate-240 left-120 z-10">
+      <img src="/Assests/fantatransperent.png" alt="fanta" id="fanta" class="w-[25%] z-20 absolute custom-transition ">
+      <img src="/Assests/orangetransperant.png" alt="orange" id="orange" class="w-[20%] absolute top-20 left-87 z-10 custom-transition">
+      <img src="/Assests/orange.webp" alt="orange2" id="orange2" class="w-[20%] absolute top-125 right-85 z-30 custom-transition">
+      <img src="/Assests/leaftransparent.png" alt="leaf" id="leaf" class="w-[15%] absolute top-14 rotate-240 left-120 z-10 custom-transition">
     </div>
 
     <div id="two" class="w-full h-screen flex bg-[#4d231c]">
@@ -51,24 +51,24 @@
     </div>
 
 
-    <div id="three" class="w-full h-screen  bg-[#4d231c] flex items-center justify-around">
-      <div id="Card1" class="w-[28vw] h-[70vh] rounded-4xl flex items-center flex-col justify-center bg-amber-50 gap-6  relative">
-        <img src="/Assests/spritetransparent.png" alt="spritecan" class="w-[100%] absolute top-[20%] z-20">
-        <img src="/Assests/lemon.png" alt="lemonslice" class="w-[60%] absolute top-[2%] left-[21%] z-10">
+    <div id="three" class="w-full min-h-screen bg-[#4d231c] flex items-center justify-around relative">
+      <div id="Card1" class="w-[28vw] h-[70vh] rounded-4xl flex items-center flex-col justify-center bg-amber-50 gap-6 ">
+        <img src="/Assests/spritetransparent.png" alt="spritecan" id="spritecan" class="w-[35%] absolute top-[20%] z-20 custom-transition">
+        <img src="/Assests/lemon.png" alt="lemonslice"id="lemonslice" class="w-[20%] absolute top-[3%] left-[7%] z-10 custom-transition">
         <h1 id="cardtitle" class="font-PtSansB text-black text-5xl mt-[50vh]">Sprite</h1>
         <button id="cardbtn" class=" bg-gradient-to-br	from-yellow-500 to-orange-500 text-xl font-PtSansB py-2 px-3 border-none rounded-3xl text-white">BUY NOW</button>
       </div>
 
       <div id="Card2" class="card">
-       <img src="/Assests/fantatransperent.png" alt="spritecan" class="w-[55%] absolute top-[20%] z-20">
-       <img src="/Assests/orangetransperant.png" alt="lemonslice" class="w-[60%] absolute top-[2%] left-[21%] z-10"> 
+       <!-- <img src="/Assests/fantatransperent.png" alt="spritecan" class="w-[55%] absolute top-[20%] z-20">
+       <img src="/Assests/orangetransperant.png" alt="lemonslice" class="w-[60%] absolute top-[2%] left-[21%] z-10">  -->
        <h1 class="cardTitle">Fanta</h1>
        <button class="cardButton">BUY NOW</button>
       </div>
 
       <div id="Card3" class="card">
-        <img src="/Assests/pepsitransparent.png" alt="spritecan" class="w-[95%] absolute top-[20%] z-20">
-        <img src="/Assests/pepsilogo.png" alt="lemonslice" class="w-[70%] absolute top-[1%] left-[15%] z-10">
+        <img src="/Assests/pepsitransparent.png" alt="spritecan" id="pepsican" class="w-[32%] absolute top-[20%] z-20 custom-transition">
+        <img src="/Assests/pepsilogo.png" alt="lemonslice"id="pepsilogo" class="w-[22%] absolute top-[0%] left-[72%] z-10 custom-transition">
         <h1 class="cardTitle">Pepsi</h1>
         <button class="cardButton">BUY NOW</button>
 
@@ -77,5 +77,8 @@
 
   </div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>

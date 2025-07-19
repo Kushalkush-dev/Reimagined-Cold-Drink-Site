@@ -24,7 +24,7 @@
 
 @layer components{
  .card{
-  @apply w-[28vw] h-[70vh] rounded-4xl flex items-center flex-col justify-center bg-amber-50 gap-6 relative;
+  @apply w-[28vw] h-[70vh] rounded-4xl flex items-center flex-col justify-center bg-amber-50 gap-6;
 }
 
  .cardTitle{
@@ -34,4 +34,11 @@
  .cardButton{
   @apply bg-gradient-to-br	from-yellow-500 to-orange-500 text-xl font-PtSansB py-2 px-3 border-none rounded-3xl text-white
  }
+}
+
+
+@layer utilities{
+ .custom-transition {
+  transition: transition-all duration-300 ease-in-out;
+}
 }
