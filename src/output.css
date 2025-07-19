@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-black: #000;
     --color-white: #fff;
@@ -209,14 +210,8 @@
   .left-120 {
     left: calc(var(--spacing) * 120);
   }
-  .left-\[10\%\] {
-    left: 10%;
-  }
   .left-\[15\%\] {
     left: 15%;
-  }
-  .left-\[19\%\] {
-    left: 19%;
   }
   .left-\[21\%\] {
     left: 21%;
@@ -284,9 +279,6 @@
   .w-\[70\%\] {
     width: 70%;
   }
-  .w-\[80\%\] {
-    width: 80%;
-  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -295,9 +287,6 @@
   }
   .w-\[100\%\] {
     width: 100%;
-  }
-  .w-\[150\%\] {
-    width: 150%;
   }
   .w-full {
     width: 100%;
@@ -364,6 +353,9 @@
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
   }
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
