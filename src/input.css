@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/fonts/PTSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'ProductSansB';
+  src: url('/fonts/PTSans-Bold.ttf');
+}
+
+@theme{
+  --font-PtSans:ProductSans , "sans-serif"
+  
+}
+
+
+@theme{
+  --font-PtSansB:ProductSansB , "sans-serif"
+  
+}
