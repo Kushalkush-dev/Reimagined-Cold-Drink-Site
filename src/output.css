@@ -12,12 +12,17 @@
     --color-orange-400: oklch(75% 0.183 55.934);
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-amber-800: oklch(47.3% 0.137 46.201);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-yellow-950: oklch(28.6% 0.066 53.813);
+    --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-purple-400: oklch(71.4% 0.203 305.504);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-white: #fff;
@@ -36,6 +41,7 @@
     --text-9xl--line-height: 1;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-PtSans: ProductSans , "sans-serif";
     --font-PtSansB: ProductSansB , "sans-serif";
   }
 }
@@ -200,6 +206,9 @@
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
+  .top-14 {
+    top: calc(var(--spacing) * 14);
+  }
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
@@ -260,6 +269,15 @@
   .left-87 {
     left: calc(var(--spacing) * 87);
   }
+  .left-100 {
+    left: calc(var(--spacing) * 100);
+  }
+  .left-110 {
+    left: calc(var(--spacing) * 110);
+  }
+  .left-120 {
+    left: calc(var(--spacing) * 120);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -268,6 +286,24 @@
   }
   .z-30 {
     z-index: 30;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .z-auto {
+    z-index: auto;
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-36 {
+    margin-top: calc(var(--spacing) * 36);
+  }
+  .mt-\[10vh\] {
+    margin-top: 10vh;
+  }
+  .mt-\[50vh\] {
+    margin-top: 50vh;
   }
   .flex {
     display: flex;
@@ -293,6 +329,12 @@
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
+  .h-\[100\%\] {
+    height: 100%;
+  }
+  .h-auto {
+    height: auto;
+  }
   .h-dvw {
     height: 100dvw;
   }
@@ -301,6 +343,12 @@
   }
   .max-h-lh {
     max-height: 1lh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
@@ -332,6 +380,9 @@
   .w-\[25\%\] {
     width: 25%;
   }
+  .w-\[50\%\] {
+    width: 50%;
+  }
   .w-fit {
     width: fit-content;
   }
@@ -343,6 +394,57 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .rotate-45 {
+    rotate: 45deg;
+  }
+  .rotate-90 {
+    rotate: 90deg;
+  }
+  .rotate-100 {
+    rotate: 100deg;
+  }
+  .rotate-120 {
+    rotate: 120deg;
+  }
+  .rotate-150 {
+    rotate: 150deg;
+  }
+  .rotate-160 {
+    rotate: 160deg;
+  }
+  .rotate-180 {
+    rotate: 180deg;
+  }
+  .rotate-190 {
+    rotate: 190deg;
+  }
+  .rotate-210 {
+    rotate: 210deg;
+  }
+  .rotate-240 {
+    rotate: 240deg;
+  }
+  .rotate-250 {
+    rotate: 250deg;
+  }
+  .rotate-1100 {
+    rotate: 1100deg;
+  }
+  .rotate-x-45 {
+    --tw-rotate-x: rotateX(45deg);
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .rotate-x-50 {
+    --tw-rotate-x: rotateX(50deg);
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .rotate-x-60 {
+    --tw-rotate-x: rotateX(60deg);
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .resize {
     resize: both;
@@ -363,11 +465,32 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#4d231c\] {
+    background-color: #4d231c;
+  }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
+  }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
+  .bg-amber-800 {
+    background-color: var(--color-amber-800);
+  }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
+  .bg-green-600 {
+    background-color: var(--color-green-600);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
@@ -438,6 +561,10 @@
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
+  .to-blue-400 {
+    --tw-gradient-to: var(--color-blue-400);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .to-orange-400 {
     --tw-gradient-to: var(--color-orange-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -464,6 +591,9 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .font-PtSans {
+    font-family: var(--font-PtSans);
   }
   .font-PtSansB {
     font-family: var(--font-PtSansB);
@@ -500,6 +630,12 @@
   .text-\[30vw\] {
     font-size: 30vw;
   }
+  .text-\[32vw\] {
+    font-size: 32vw;
+  }
+  .text-\[35vw\] {
+    font-size: 35vw;
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -518,6 +654,26 @@
 @font-face {
   font-family: 'ProductSansB';
   src: url('/fonts/PTSans-Bold.ttf');
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -649,6 +805,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
