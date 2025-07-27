@@ -8,10 +8,11 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
   <link rel="stylesheet" href="output.css">
 </head>
 <body class="overflow-x-hidden">
-  <div id="main" class="overflow-x-hidden">
+  <div id="main" class="overflow-x-hidden" data-scroll-container>
     <nav class="flex items-center justify-between w-full h-15 px-10 py-3 font-PtSans text-xl fixed text-white z-50">
       <a href="#"><img src="/Assests/coco-cola.png" alt="logo" class="w-full h-15"></a>
       <div id="center-nav" class="flex gap-5">
@@ -22,7 +23,7 @@
       </div>
       <i class="ri-menu-fill"></i>
     </nav>
-    <div id="one" class="w-full h-screen flex items-center justify-center bg-gradient-to-br	from-yellow-500 to-orange-500">
+    <div id="one" class="w-full h-screen flex items-center justify-center bg-gradient-to-br	from-yellow-500 to-orange-500" data-scroll>
       <h1 id="Fantatitle" class="text-[30vw] font-PtSansB text-white">FANTA</h1>
       <img src="/Assests/fantatransperent.png" alt="fanta" id="fanta" class="w-[25%] z-20 absolute custom-transition ">
       <img src="/Assests/orangetransperant.png" alt="orange" id="orange" class="w-[20%] absolute top-20 left-87 z-10 custom-transition">
@@ -30,7 +31,7 @@
       <img src="/Assests/leaftransparent.png" alt="leaf" id="leaf" class="w-[15%] absolute top-14 rotate-240 left-120 z-10 custom-transition">
     </div>
 
-    <div id="two" class="w-full h-screen flex bg-[#4d231c]">
+    <div id="two" class="w-full h-screen flex bg-[#4d231c]" data-scroll>
       <div id="leftpart" class="w-1/2  h-[100%] flex items-center justify-center">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-[50%] items-center justify-center rotate-x-50 mt-[50vh]">
         <path fill="#BE5103" d="M44.8,-54.3C59.9,-50.8,75.2,-40.1,75.7,-27.2C76.2,-14.4,62,0.6,53.9,15C45.7,29.4,43.6,43.2,35.6,49.8C27.7,56.4,13.8,55.6,-0.3,56C-14.4,56.4,-28.7,57.8,-41.4,52.8C-54,47.7,-64.9,36.2,-72.2,21.6C-79.5,7,-83.2,-10.6,-77.4,-24.1C-71.6,-37.6,-56.2,-47,-41.8,-50.7C-27.3,-54.4,-13.6,-52.6,0.6,-53.4C14.9,-54.3,29.8,-57.9,44.8,-54.3Z" transform="translate(100 100)" />
@@ -56,7 +57,7 @@
     </div>
 
 
-    <div id="three" class="w-full min-h-screen bg-[#4d231c] flex items-center justify-around relative">
+    <div id="three" class="w-full min-h-screen bg-[#4d231c] flex items-center justify-around relative" data-scroll>
       <div id="Card1" class="w-[28vw] h-[70vh] rounded-4xl flex items-center flex-col justify-center bg-amber-50 gap-6 ">
         <img src="/Assests/spritetransparent.png" alt="spritecan" id="spritecan" class="w-[35%] absolute top-[20%] z-20 custom-transition">
         <img src="/Assests/lemon.png" alt="lemonslice"id="lemonslice" class="w-[20%] absolute top-[3%] left-[7%] z-10 custom-transition">
@@ -81,7 +82,7 @@
     </div>
 
   </div>
-  
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>

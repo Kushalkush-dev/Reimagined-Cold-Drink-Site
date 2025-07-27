@@ -1,3 +1,13 @@
+
+
+// var scroll=new LocomotiveScroll({
+//   el:'[data-scroll-container]',
+//   smooth:true
+// })
+
+
+
+
 var tl= gsap.timeline({scrollTrigger:{
   trigger:"#two",
   start:"5% 95%",
